@@ -173,6 +173,15 @@
         };
     };
 
+    behaviors {
+        // Encoder RGB brightness control (rgb_ug cannot be a sensor binding directly)
+        rgb_encoder: rgb_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -221,7 +230,7 @@
                                        &none         &none         &none          &none          &none          &kp C_STOP     &kp C_PP       &kp C_MUTE     &trans       &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &rgb_ug RGB_BRI RGB_BRD>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &rgb_encoder>;
         };
 
         sym_layer {
