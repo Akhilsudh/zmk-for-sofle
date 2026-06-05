@@ -31,3 +31,16 @@ nice_view_spi: &spi0 {
 &oled {
     status = "disabled";
 };
+
+/*
+ * The nice!view SPI bus drives SCK on P0.20, which the Sofle rotary encoder
+ * also uses (pro_micro pin 20). Disable both encoders on nice!view builds to
+ * avoid the pin conflict. (OLED builds keep the encoders enabled.)
+ */
+&left_encoder {
+    status = "disabled";
+};
+
+&right_encoder {
+    status = "disabled";
+};
