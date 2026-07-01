@@ -213,8 +213,8 @@
             display-name = "NUM";
             bindings = <
 &trans         &trans      &trans      &trans        &trans        &trans                                       &trans      &trans        &trans        &trans       &trans       &trans
-&none          &kp LBKT    &kp N7      &kp N8        &kp N9        &kp RBKT                                     &none       &none         &none         &none        &none        &none
-&none          &kp SEMI    &kp N4      &kp N5        &kp N6        &kp EQUAL                                    &none       &kp RSHFT     &kp RCTRL     &kp RALT     &kp RGUI     &none
+&kp GRAVE      &kp N1      &kp N2      &kp N3        &kp N4        &kp N5                                       &kp N6      &kp N7        &kp N8        &kp N9       &kp N0       &kp EQUAL
+&kp LS(GRAVE)  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)    &kp LS(N4)    &kp LS(N5)                                   &kp LS(N6)  &kp LS(N7)    &kp LS(N8)    &kp LS(N9)   &kp LS(N0)   &kp LS(EQUAL)
 &none          &kp GRAVE   &kp N1      &kp N2        &kp N3        &kp BSLH       &trans         &trans         &none       &none         &none         &none        &none        &none
                                        &trans        &trans        &kp DOT        &kp N0         &kp MINUS      &none       &none         &none         &trans       &trans
             >;
